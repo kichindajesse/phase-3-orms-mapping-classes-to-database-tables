@@ -1,7 +1,6 @@
-#!/usr/bin/env ruby 
+require 'bundler'
+Bundler.require
 
-require 'pry'
-require_relative '../config/environment'
+require_relative '../lib/song'
 
-binding.pry
-"pls"
+DB = { conn: SQLite3::Database.new("db/music.db") }
